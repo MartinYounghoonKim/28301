@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7rj%m-b6x5xa22u(zj1l4^6pu#8uv!s_tn$58(+f@=$t6$3*7l'
+SECRET_KEY = 'lpu1&pi^!v8f(lk60)=ulpzc!&6mn1)btk8l0v_45(rn66_6e8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Seoul'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -120,9 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Rest framework settings
+# REST Framework Settings
 
 REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
