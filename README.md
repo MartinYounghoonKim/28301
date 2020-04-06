@@ -8,6 +8,10 @@
 
 - 추가예정
 
+## CI/CD Pipeline
+
+- CircleCI 사용예정
+
 ## Endpoints
 
 | API | Docker Registry | Domain |
