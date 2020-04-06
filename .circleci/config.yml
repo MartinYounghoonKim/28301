@@ -5,6 +5,9 @@ orbs:
 
 jobs:
   build-and-test:
+    branches:
+      only:
+        - dev
     executor: python/default
     steps:
       - checkout
