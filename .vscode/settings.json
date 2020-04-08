@@ -1,3 +1,30 @@
 {
-    "python.pythonPath": ".venv\\Scripts\\python.exe"
+    "python.pythonPath": ".venv/bin/python",
+    "todohighlight.isEnable": true,
+    "todohighlight.keywords": [
+        {
+            "text": "WIP:",
+            "color": "#ffffff",
+            "backgroundColor": "#0097a7"
+        }
+    ],
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.py",
+        "**/Dockerfile",
+        "**/*.yml",
+    ],
+    "search.exclude":{
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/.venv": true,
+    }
 }
