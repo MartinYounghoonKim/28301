@@ -9,10 +9,12 @@ from rest_framework.parsers import JSONParser
 from ..serializers import UserSerializer
 from ..models import User
 
+
 class UserAuthentication(APIView):
     """
     유저 인증 클래스
     """
+
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.AllowAny]
 
@@ -21,8 +23,16 @@ class UserAuthentication(APIView):
         회원 정보를 반환합니다.
         """
 
-        user_names = [user.userName for user in User.objects.all()]
-        return Response(user_names, status=status.HTTP_200_OK)
+        user_data = [
+            {
+                "ID": user.userId,
+                "Nickname": user.userName,
+                "Password": user.password,
+                "Duty": user.duty,
+            }
+            for user in User.objects.all()
+        ]
+        return Response(user_data, status=status.HTTP_200_OK)
 
     def post(self, request):
         """
