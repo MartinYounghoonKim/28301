@@ -28,11 +28,7 @@ if os.environ.get('DJANGO_DEBUG'):
 else:
     DEBUG = False
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['*']
-=======
 ALLOWED_HOSTS = [ '*' ]
->>>>>>> 04c41de41b1d47f3c43624c0edc82c6aad75808a
 
 
 # Application definition
@@ -134,10 +130,6 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-<<<<<<< HEAD
-        'rest_framework.permissions.AllowAny'
-=======
         'rest_framework.permissions.AllowAny',
->>>>>>> 04c41de41b1d47f3c43624c0edc82c6aad75808a
     ]
 }
