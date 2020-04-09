@@ -23,9 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'lpu1&pi^!v8f(lk60)=ulpzc!&6mn1)btk8l0v_45(rn66_6e8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get('DJANGO_DEBUG'):
+    DEBUG = True
+else:
+    DEBUG = False
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['*']
+=======
+ALLOWED_HOSTS = [ '*' ]
+>>>>>>> 04c41de41b1d47f3c43624c0edc82c6aad75808a
 
 
 # Application definition
@@ -127,6 +134,10 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
+<<<<<<< HEAD
         'rest_framework.permissions.AllowAny'
+=======
+        'rest_framework.permissions.AllowAny',
+>>>>>>> 04c41de41b1d47f3c43624c0edc82c6aad75808a
     ]
 }

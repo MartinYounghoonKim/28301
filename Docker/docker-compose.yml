@@ -1,2 +1,22 @@
-FROM python:latest
-COPY 
+version: '3'
+# WIP: 서비스 CI/CD 파이프라이닝 정리 후 작성
+services:
+  db:
+    image: mariadb:latest
+  backend:
+    command: gunicorn -w 12 backend.wsgi:app
+    volumes:
+      - .:/app
+    networks:
+      - '28301'
+    depends_on:
+      - db
+  nginx:
+    image: nginx:latest
+    depends_on: 
+      - db
+      - backend
+volumes:
+  db:
+  backend:
+  nginx:
